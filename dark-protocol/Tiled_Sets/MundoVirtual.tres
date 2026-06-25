@@ -1,0 +1,55 @@
+[gd_resource type="TileSet" format=3 uid="uid://cyt7mwjpyjtwv"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u1nmv"]
+load_path = "res://.godot/imported/tiledset1.png-4f23a56827c8d56aa8483905cfb0b56d.ctex"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y3hhy"]
+texture = SubResource("CompressedTexture2D_u1nmv")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -16, 16, 16, -16, 16, -16, -16)
+3:0/0 = 0
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:1/0 = 0
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:2/0 = 0
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:3/0 = 0
+1:3/0/physics_layer_1/polygon_0/points = PackedVector2Array(-16, 16, -9.352654, 3.4173164, -5.036045, 12.410253, 0.5395756, 4.3166094, 5.3957615, 10.971383, 8.992935, 2.1583052, 16, 16)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0.17985916, 16, 0.5395775, 16, 16, -16, 16)
+2:3/0/physics_layer_1/polygon_0/points = PackedVector2Array(-16, 0, -9.661832, -12.486061, -4.1620197, -5.202526, 0.1486435, -12.486061, 4.607951, -3.8647337, 9.513188, -12.783348, 16, 0.1486435)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -0.8705158, 16, -0.65288544, 16, -16, -16, -16)
+3:3/0/physics_layer_1/polygon_0/points = PackedVector2Array(-16, -0.74321747, -8.918613, 16, -5.0538807, 5.3511686, 0.89186287, 13.8238535, 3.8647327, 5.0538807, 10.256407, 13.526566, 16, -0.8918619)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 0, 16, 0.17985916, 16, 13.144512, -16, 13.144513)
+
+[resource]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 0
+physics_layer_1/collision_layer = 2
+physics_layer_1/collision_mask = 0
+sources/0 = SubResource("TileSetAtlasSource_y3hhy")
