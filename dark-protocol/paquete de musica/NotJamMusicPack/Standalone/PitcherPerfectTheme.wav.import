@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bljg0fy2fl76f"
+path="res://.godot/imported/PitcherPerfectTheme.wav-96bf4c82b0bee6370c63b4b9957a238a.sample"
+
+[deps]
+
+source_file="res://paquete de musica/NotJamMusicPack/Standalone/PitcherPerfectTheme.wav"
+dest_files=["res://.godot/imported/PitcherPerfectTheme.wav-96bf4c82b0bee6370c63b4b9957a238a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

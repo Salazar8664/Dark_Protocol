@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://olseh2cddfdu"
+path="res://.godot/imported/KleptoLindaCavernsB_Loopable.wav-51e93f4d4a45a6cd3f5459b091d0cafc.sample"
+
+[deps]
+
+source_file="res://paquete de musica/NotJamMusicPack/Loopable/KleptoLindaCavernsB_Loopable.wav"
+dest_files=["res://.godot/imported/KleptoLindaCavernsB_Loopable.wav-51e93f4d4a45a6cd3f5459b091d0cafc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

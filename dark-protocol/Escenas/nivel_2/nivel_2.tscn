@@ -1,0 +1,64 @@
+[gd_scene format=4 uid="uid://bnvbw6oomgciw"]
+
+[ext_resource type="PackedScene" uid="uid://t3pr30tv1b87" path="res://Escenas/Trampa/trampa.tscn" id="1_id5mj"]
+[ext_resource type="PackedScene" uid="uid://bu867sklryf28" path="res://Escenas/Personaje/Personaje.tscn" id="2_6xxi0"]
+[ext_resource type="PackedScene" uid="uid://crquqkbhlb5so" path="res://Escenas/Bordes/bordes.tscn" id="3_lcfl8"]
+[ext_resource type="TileSet" uid="uid://cyt7mwjpyjtwv" path="res://Tiled_Sets/MundoVirtual.tres" id="4_8m7pb"]
+[ext_resource type="PackedScene" uid="uid://cufwqcqrb85nn" path="res://Escenas/Contenedor_De_Monedas/contenedor_monedas.tscn" id="5_lcfl8"]
+[ext_resource type="PackedScene" uid="uid://6aor2y7fchwd" path="res://Escenas/Moneda/dinero_moneda.tscn" id="6_8m7pb"]
+
+[node name="Nivel_2" type="Node2D" unique_id=2076342060]
+
+[node name="Trampa3" parent="." unique_id=489913387 instance=ExtResource("1_id5mj")]
+position = Vector2(208, -144)
+
+[node name="Trampa" parent="." unique_id=1591770687 instance=ExtResource("1_id5mj")]
+position = Vector2(80, -80)
+
+[node name="Personaje" parent="." unique_id=941952079 instance=ExtResource("2_6xxi0")]
+position = Vector2(-452, 276)
+
+[node name="bordes" parent="." unique_id=1988649438 instance=ExtResource("3_lcfl8")]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1536292167]
+tile_map_data = PackedByteArray("AAD1/wcAAAAEAAMAAAD2/wcAAAAEAAMAAAD3/wcAAAAEAAMAAAD4/wcAAAAEAAMAAAD6/wYAAAAEAAMAAAD7/wYAAAAEAAMAAAD8/wYAAAAEAAMAAAD9/wYAAAAEAAMAAAD5/wkAAAACAAMAAAD6/wkAAAACAAMAAAD7/wkAAAACAAMAAAD8/wkAAAACAAMAAAD9/wkAAAACAAMAAAD+/wkAAAACAAMAAAD//wkAAAABAAMAAAAAAAkAAAABAAMAAAABAAkAAAABAAMAAAACAAkAAAABAAMAAAADAAkAAAABAAMAAAAEAAkAAAABAAMAAAAFAAkAAAABAAMAAAAGAAkAAAABAAMAAAAHAAkAAAABAAMAAAAIAAkAAAABAAMAAAAJAAkAAAABAAMAAAAKAAkAAAABAAMAAAALAAkAAAABAAMAAAAMAAkAAAABAAMAAAANAAkAAAABAAMAAAAOAAkAAAABAAMAAAAAAAYAAAAAAAEAAAABAAYAAAAAAAEAAAACAAYAAAABAAEAAAADAAYAAAACAAEAAAAEAAYAAAAAAAEAAAAFAAYAAAABAAEAAAAGAAYAAAACAAEAAAACAAUAAAABAAAAAAADAAUAAAACAAAAAAAEAAUAAAACAAEAAAD//wUAAAAAAAEAAAAAAAUAAAABAAEAAAABAAUAAAAAAAAAAAAMAAEAAAAEAAAAAAAMAAIAAAAEAAEAAAAMAAMAAAAEAAIAAAAOAP//AAAEAAAAAAAOAAAAAAAEAAEAAAAOAAEAAAAEAAIAAAAOAP3/AAAEAAMAAAANAP3/AAAEAAMAAAAMAP3/AAAEAAMAAAALAP3/AAAEAAMAAAAKAPv/AAAEAAMAAAAJAPv/AAAEAAMAAAAIAPv/AAAEAAMAAAADAPv/AAAAAAAAAAADAPz/AAAAAAIAAAAEAPv/AAABAAAAAAAEAPz/AAABAAIAAAAFAPv/AAACAAAAAAAFAPz/AAACAAIAAAD///3/AAAAAAEAAAD///7/AAAAAAIAAAAAAP3/AAABAAEAAAAAAP7/AAABAAIAAAABAP3/AAACAAEAAAABAP7/AAACAAIAAAD7//z/AAAAAAAAAAD7//3/AAAAAAIAAAD8//z/AAABAAAAAAD8//3/AAABAAIAAAD9//z/AAACAAAAAAD9//3/AAACAAIAAADx//7/AAAAAAEAAADx////AAAAAAIAAADy//7/AAABAAEAAADy////AAABAAIAAADz//7/AAACAAEAAADz////AAACAAIAAAD0//3/AAAAAAAAAAD0//7/AAAAAAIAAAD1//3/AAABAAAAAAD1//7/AAABAAIAAAD2//3/AAACAAAAAAD2//7/AAACAAIAAAD3//3/AAAAAAEAAAD3//7/AAAAAAIAAAD4//3/AAABAAEAAAD4//7/AAABAAIAAAD5//3/AAACAAEAAAD5//7/AAACAAIAAADx/wkAAAAAAAAAAADy/wkAAAABAAAAAADz/wkAAAACAAAAAAAIAAUAAAAEAAIAAAAIAAQAAAAEAAEAAAAIAAMAAAAEAAAAAAAKAAMAAAAEAAEAAAAKAAQAAAAEAAIAAAAKAAIAAAAEAAAAAAA=")
+tile_set = ExtResource("4_8m7pb")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1271164635]
+tile_map_data = PackedByteArray("AADx/wkAAAADAAEAAADy/wkAAAADAAEAAADz/wkAAAADAAEAAAD1/woAAAADAAEAAAD2/woAAAADAAEAAAD9/wYAAAADAAEAAAAAAAUAAAADAAIAAAABAAYAAAADAAIAAAAIAAQAAAADAAIAAAAMAAEAAAADAAIAAAABAP7/AAADAAIAAAADAPz/AAADAAIAAAAEAPv/AAADAAIAAAD8//3/AAADAAEAAAD4//7/AAADAAEAAAD4//3/AAADAAEAAAD4//z/AAADAAAAAAD5//z/AAADAAEAAAD1//7/AAADAAAAAAD0//7/AAADAAAAAAD4/wcAAAADAAAAAAD1/wYAAAADAAAAAAD1/wcAAAADAAAAAAAAAAYAAAADAAAAAAAAAAcAAAADAAAAAAAIAAYAAAADAAAAAAAKAAUAAAADAAAAAAAMAAQAAAADAAAAAAAOAAIAAAADAAAAAAANAP3/AAADAAEAAAAKAPv/AAADAAEAAAA=")
+tile_set = ExtResource("4_8m7pb")
+
+[node name="Trampa2" parent="." unique_id=591411751 instance=ExtResource("1_id5mj")]
+position = Vector2(-176, -80)
+
+[node name="Trampa4" parent="." unique_id=1137972792 instance=ExtResource("1_id5mj")]
+position = Vector2(336, -78)
+
+[node name="Trampa5" parent="." unique_id=148238849 instance=ExtResource("1_id5mj")]
+position = Vector2(-48, -80)
+
+[node name="ContenedorMonedas" parent="." unique_id=1473114733 instance=ExtResource("5_lcfl8")]
+
+[node name="DineroMoneda" parent="ContenedorMonedas" unique_id=396998521 instance=ExtResource("6_8m7pb")]
+position = Vector2(-176, 188)
+scale = Vector2(0.14, 0.14)
+
+[node name="DineroMoneda2" parent="ContenedorMonedas" unique_id=86507311 instance=ExtResource("6_8m7pb")]
+position = Vector2(79, 134)
+scale = Vector2(0.14, 0.14)
+
+[node name="DineroMoneda3" parent="ContenedorMonedas" unique_id=1866442573 instance=ExtResource("6_8m7pb")]
+position = Vector2(210.00003, 176)
+scale = Vector2(0.14, 0.14)
+
+[node name="DineroMoneda4" parent="ContenedorMonedas" unique_id=1539281291 instance=ExtResource("6_8m7pb")]
+position = Vector2(-51, 245)
+scale = Vector2(0.14, 0.14)
+
+[node name="DineroMoneda5" parent="ContenedorMonedas" unique_id=1053877987 instance=ExtResource("6_8m7pb")]
+position = Vector2(400, 16.999985)
+scale = Vector2(0.14, 0.14)
+
+[node name="DineroMoneda6" parent="ContenedorMonedas" unique_id=2145347938 instance=ExtResource("6_8m7pb")]
+position = Vector2(-431, -80)
+scale = Vector2(0.14, 0.14)

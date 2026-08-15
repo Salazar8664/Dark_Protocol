@@ -1,17 +1,82 @@
 [gd_scene format=4 uid="uid://dkk4e0d7oos8e"]
 
+[ext_resource type="PackedScene" uid="uid://bu405mmwpevuo" path="res://Escenas/PlataformasMobiles/plataforma_movil.tscn" id="1_dk70b"]
+[ext_resource type="PackedScene" uid="uid://cufwqcqrb85nn" path="res://Escenas/Contenedor_De_Monedas/contenedor_monedas.tscn" id="1_ep2xj"]
 [ext_resource type="PackedScene" uid="uid://crquqkbhlb5so" path="res://Escenas/Bordes/bordes.tscn" id="1_nvt0k"]
+[ext_resource type="PackedScene" uid="uid://6aor2y7fchwd" path="res://Escenas/Moneda/dinero_moneda.tscn" id="1_ux7qp"]
 [ext_resource type="TileSet" uid="uid://cyt7mwjpyjtwv" path="res://Tiled_Sets/MundoVirtual.tres" id="2_5ec76"]
 [ext_resource type="PackedScene" uid="uid://bu867sklryf28" path="res://Escenas/Personaje/Personaje.tscn" id="3_5ec76"]
+[ext_resource type="PackedScene" uid="uid://t3pr30tv1b87" path="res://Escenas/Trampa/trampa.tscn" id="4_bfc1u"]
+[ext_resource type="PackedScene" uid="uid://cplc5w43wyvge" path="res://Escenas/Trampa/Trampas_Plataforma/Plataforma_trampa.tscn" id="5_r18xa"]
+[ext_resource type="PackedScene" uid="uid://c0lshywyeiv1f" path="res://Escenas/Trampa/Trampas_Plataforma/plataforma_trampa_2.tscn" id="9_4h7fp"]
+[ext_resource type="PackedScene" uid="uid://bfbuda6uur76m" path="res://Escenas/Trampa/Trampas_Plataforma/plataforma_trampa_3.tscn" id="10_8kdcp"]
+
+[sub_resource type="Animation" id="Animation_dk70b"]
+resource_name = "MovimientoPlataforma"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1.2745614, 1.7411013),
+"update": 0,
+"values": [Vector2(144, 8), Vector2(400, 8)]
+}
+
+[sub_resource type="Animation" id="Animation_ux7qp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(144, 8)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ep2xj"]
+_data = {
+&"MovimientoPlataforma": SubResource("Animation_dk70b"),
+&"RESET": SubResource("Animation_ux7qp")
+}
 
 [node name="Nivel1" type="Node2D" unique_id=1285888537]
+
+[node name="ContenedorMonedas" parent="." unique_id=1473114733 instance=ExtResource("1_ep2xj")]
+
+[node name="DineroMoneda2" parent="ContenedorMonedas" unique_id=333683349 instance=ExtResource("1_ux7qp")]
+position = Vector2(273, 46)
+scale = Vector2(0.195, 0.195)
+
+[node name="DineroMoneda" parent="ContenedorMonedas" unique_id=396998521 instance=ExtResource("1_ux7qp")]
+position = Vector2(402, -16)
+scale = Vector2(0.195, 0.195)
+
+[node name="Plataforma_Movil2" parent="." unique_id=217143011 instance=ExtResource("1_dk70b")]
+position = Vector2(144, 8)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Plataforma_Movil2" unique_id=1077807479]
+libraries/ = SubResource("AnimationLibrary_ep2xj")
+autoplay = &"MovimientoPlataforma"
+
+[node name="Plataforma_Movil" parent="." unique_id=370787953 instance=ExtResource("1_dk70b")]
+position = Vector2(0, -50)
 
 [node name="fondo" type="TileMapLayer" parent="." unique_id=106448987]
 tile_map_data = PackedByteArray("AAAFAAkAAAADAAIAAAD2/wgAAAADAAIAAADx/wkAAAADAAIAAADy/wkAAAADAAIAAAA=")
 tile_set = ExtResource("2_5ec76")
 
 [node name="nivel" type="TileMapLayer" parent="." unique_id=252628418]
-tile_map_data = PackedByteArray("AAD1/wkAAAABAAEAAAD2/wkAAAAAAAAAAAD3/wkAAAABAAEAAAD4/wkAAAABAAAAAAD5/wkAAAABAAEAAAD6/wkAAAACAAAAAAD7/wkAAAABAAEAAAD8/wkAAAABAAEAAAD9/wkAAAABAAEAAAD0/woAAAABAAEAAAD4/woAAAABAAEAAAD3/woAAAABAAEAAAD2/woAAAABAAEAAAD1/woAAAABAAEAAAD5/woAAAABAAEAAAD6/woAAAABAAEAAAD7/woAAAABAAEAAAD8/woAAAACAAEAAAD9/woAAAACAAAAAAD+/woAAAACAAEAAAD3/wgAAAABAAEAAAD4/wgAAAABAAEAAAD5/wgAAAAAAAEAAAD6/wgAAAAAAAEAAAD7/wgAAAAAAAEAAAD8/wgAAAAAAAEAAAD4/wcAAAAAAAAAAAD5/wcAAAABAAAAAAD6/wcAAAABAAAAAAD7/wcAAAABAAAAAAD8/wcAAAABAAAAAAD9/wcAAAACAAAAAAD9/wgAAAACAAAAAADy/wUAAAAAAAIAAAD0/wUAAAAAAAIAAADx/wQAAAAAAAIAAADz/wUAAAABAAIAAADy/wQAAAABAAEAAADz/wQAAAABAAEAAAD0/wQAAAABAAEAAAD1/wQAAAACAAIAAAD+/wcAAAAAAAAAAAD+/wgAAAAAAAEAAAD+/wkAAAAAAAIAAAD//wcAAAABAAAAAAD//wgAAAABAAEAAAD//wkAAAABAAIAAAAAAAcAAAACAAAAAAAAAAgAAAACAAEAAAAAAAkAAAACAAIAAAABAAcAAAAAAAAAAAABAAgAAAAAAAEAAAABAAkAAAAAAAIAAAACAAcAAAABAAAAAAACAAgAAAABAAEAAAACAAkAAAABAAIAAAADAAcAAAACAAAAAAADAAgAAAACAAEAAAADAAkAAAACAAIAAAAGAAcAAAAAAAAAAAAGAAgAAAAAAAEAAAAGAAkAAAAAAAIAAAAHAAcAAAABAAAAAAAHAAgAAAABAAEAAAAHAAkAAAABAAIAAAAIAAcAAAACAAAAAAAIAAgAAAACAAEAAAAIAAkAAAACAAIAAAAJAAkAAAAEAAIAAAAJAAgAAAAEAAEAAAAJAAcAAAAEAAAAAAAKAAcAAAAEAAAAAAALAAcAAAAEAAAAAAAKAAkAAAABAAEAAAAKAAgAAAABAAEAAAALAAgAAAABAAEAAAAMAAgAAAABAAEAAAAMAAcAAAAEAAAAAAALAAkAAAAAAAAAAAAMAAkAAAAAAAAAAAANAAkAAAAAAAAAAAANAAgAAAAEAAIAAAANAAcAAAAEAAEAAAANAAYAAAAEAAAAAAAOAAkAAAABAAEAAAAOAAgAAAABAAEAAAAOAAcAAAABAAEAAAAOAAYAAAABAAEAAAAOAAUAAAABAAEAAAAMAAYAAAAEAAAAAAALAAMAAAACAAIAAAACAAEAAAACAAIAAAAKAAMAAAABAAIAAAABAAEAAAABAAIAAAAAAAEAAAABAAIAAAD+/wEAAAAAAAIAAAD//wEAAAAAAAIAAAAJAAMAAAAAAAIAAAD9/wAAAAAAAAMAAAD+/wAAAAAAAAMAAAD//wAAAAAAAAMAAAAAAAAAAAAAAAMAAAABAAAAAAAAAAMAAAACAAAAAAAAAAMAAAAIAAIAAAAAAAMAAAAJAAIAAAAAAAMAAAAKAAIAAAAAAAMAAAALAAIAAAAAAAMAAAAMAAIAAAAAAAMAAAAIAAMAAAACAAIAAAACAP//AAADAAAAAAAJAAEAAAADAAAAAAAFAAkAAAABAAMAAAALAAYAAAADAAAAAAAGAAQAAAADAAEAAAAFAAgAAAADAAEAAAD3/wcAAAADAAEAAADx/wUAAAADAAEAAAD1/wMAAAACAAMAAAAEAAkAAAABAAMAAADx/wkAAAACAAMAAAAMAAMAAAADAAMAAADx/wMAAAACAAMAAADy/wMAAAACAAMAAADz/wMAAAACAAMAAAD0/wMAAAACAAMAAAD2/wMAAAACAAIAAAABAP//AAABAAMAAAD9/wEAAAADAAMAAAA=")
+tile_map_data = PackedByteArray("AAD1/wkAAAABAAEAAAD2/wkAAAAAAAAAAAD3/wkAAAABAAEAAAD4/wkAAAABAAAAAAD5/wkAAAABAAEAAAD6/wkAAAACAAAAAAD7/wkAAAABAAEAAAD8/wkAAAABAAEAAAD9/wkAAAABAAEAAAD0/woAAAABAAEAAAD4/woAAAABAAEAAAD3/woAAAABAAEAAAD2/woAAAABAAEAAAD1/woAAAABAAEAAAD5/woAAAABAAEAAAD6/woAAAABAAEAAAD7/woAAAABAAEAAAD8/woAAAACAAEAAAD9/woAAAACAAAAAAD+/woAAAACAAEAAAD3/wgAAAAAAAEAAAD4/wgAAAABAAEAAAD5/wgAAAAAAAEAAAD6/wgAAAAAAAEAAAD7/wgAAAAAAAEAAAD8/wgAAAAAAAEAAAD4/wcAAAAAAAAAAAD5/wcAAAABAAAAAAD6/wcAAAACAAAAAAD7/wcAAAAAAAAAAAD8/wcAAAABAAAAAAD9/wcAAAACAAAAAAD9/wgAAAACAAAAAADy/wUAAAAAAAIAAAD0/wUAAAAAAAIAAADx/wQAAAAAAAIAAADz/wUAAAABAAIAAADy/wQAAAABAAEAAADz/wQAAAABAAEAAAD0/wQAAAABAAEAAAD1/wQAAAACAAIAAAD+/wcAAAAAAAAAAAD+/wgAAAAAAAEAAAD+/wkAAAAAAAIAAAD//wcAAAABAAAAAAD//wgAAAABAAEAAAD//wkAAAABAAIAAAAAAAcAAAACAAAAAAAAAAgAAAACAAEAAAAAAAkAAAACAAIAAAABAAcAAAAAAAAAAAABAAgAAAAAAAEAAAABAAkAAAAAAAIAAAACAAcAAAABAAAAAAACAAgAAAABAAEAAAACAAkAAAABAAIAAAADAAcAAAACAAAAAAADAAgAAAACAAEAAAADAAkAAAACAAIAAAAGAAcAAAAAAAAAAAAGAAgAAAAAAAEAAAAGAAkAAAAAAAIAAAAHAAcAAAABAAAAAAAHAAgAAAABAAEAAAAHAAkAAAABAAIAAAAIAAcAAAACAAAAAAAIAAgAAAACAAEAAAAIAAkAAAACAAIAAAAJAAkAAAAEAAIAAAAJAAgAAAAEAAEAAAAJAAcAAAAEAAAAAAAKAAcAAAAEAAAAAAALAAcAAAAEAAAAAAAKAAkAAAABAAEAAAAKAAgAAAABAAEAAAALAAgAAAABAAEAAAAMAAgAAAABAAEAAAAMAAcAAAAEAAAAAAALAAkAAAAAAAAAAAAMAAkAAAAAAAAAAAANAAkAAAAAAAAAAAANAAgAAAAEAAIAAAANAAcAAAAEAAEAAAANAAYAAAAEAAAAAAAOAAkAAAABAAEAAAAOAAgAAAABAAEAAAAOAAcAAAABAAEAAAAOAAYAAAABAAEAAAAOAAUAAAABAAEAAAAMAAYAAAAEAAAAAAALAAMAAAACAAIAAAACAAEAAAACAAIAAAAKAAMAAAABAAIAAAABAAEAAAABAAIAAAAAAAEAAAABAAIAAAD+/wEAAAAAAAIAAAD//wEAAAAAAAIAAAAJAAMAAAAAAAIAAAD9/wAAAAAAAAMAAAD+/wAAAAAAAAMAAAD//wAAAAAAAAMAAAAAAAAAAAAAAAMAAAABAAAAAAAAAAMAAAACAAAAAAAAAAMAAAAIAAIAAAAAAAMAAAAJAAIAAAAAAAMAAAAKAAIAAAAAAAMAAAALAAIAAAAAAAMAAAAMAAIAAAAAAAMAAAAIAAMAAAACAAIAAAACAP//AAADAAAAAAAJAAEAAAADAAAAAAAFAAkAAAABAAMAAAALAAYAAAADAAAAAAAGAAQAAAADAAEAAAAFAAgAAAADAAEAAAD3/wcAAAADAAEAAADx/wUAAAADAAEAAAD1/wMAAAACAAMAAAAEAAkAAAABAAMAAADx/wkAAAACAAMAAAAMAAMAAAADAAMAAADx/wMAAAACAAMAAADy/wMAAAACAAMAAADz/wMAAAACAAMAAAD0/wMAAAACAAMAAAD2/wMAAAACAAIAAAABAP//AAABAAMAAAD9/wEAAAADAAMAAAA=")
 tile_set = ExtResource("2_5ec76")
 
 [node name="bordes" parent="." unique_id=1988649438 instance=ExtResource("1_nvt0k")]
@@ -19,3 +84,21 @@ tile_set = ExtResource("2_5ec76")
 [node name="CharacterBody2D" parent="." unique_id=941952079 instance=ExtResource("3_5ec76")]
 position = Vector2(-81, -21.000002)
 scale = Vector2(1.931512, 1.6697547)
+
+[node name="Trampa" parent="." unique_id=489913387 instance=ExtResource("4_bfc1u")]
+position = Vector2(-112, 16)
+
+[node name="Trampa3" parent="." unique_id=1390240555 instance=ExtResource("4_bfc1u")]
+position = Vector2(240, 80)
+
+[node name="Trampa2" parent="." unique_id=1887862303 instance=ExtResource("4_bfc1u")]
+position = Vector2(112, 16)
+
+[node name="Plataforma_Trampa1" parent="." unique_id=2132009407 instance=ExtResource("5_r18xa")]
+position = Vector2(-205, 16)
+
+[node name="Plataforma_Trampa2" parent="." unique_id=1801095016 instance=ExtResource("9_4h7fp")]
+position = Vector2(-173, 16)
+
+[node name="Plataforma_Trampa3" parent="." unique_id=674004249 instance=ExtResource("10_8kdcp")]
+position = Vector2(-141, 16)

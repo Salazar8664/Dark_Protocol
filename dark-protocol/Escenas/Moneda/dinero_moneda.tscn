@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://6aor2y7fchwd"]
+
+[ext_resource type="Texture2D" uid="uid://0cq2e0inckg5" path="res://icon.svg" id="1_iog8f"]
+[ext_resource type="Script" uid="uid://ljvqebp0exgn" path="res://Escenas/Moneda/dinero_moneda.gd" id="1_roman"]
+
+[sub_resource type="Animation" id="Animation_roman"]
+resource_name = "AnimacionDinero"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(0.5547846, 0.63727975, 0.784584),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(-0.64, 0.64), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_dys7g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dks0t"]
+_data = {
+&"AnimacionDinero": SubResource("Animation_roman"),
+&"RESET": SubResource("Animation_dys7g")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iog8f"]
+radius = 65.00769
+
+[node name="DineroMoneda" type="Node2D" unique_id=396998521 node_paths=PackedStringArray("area2d")]
+script = ExtResource("1_roman")
+area2d = NodePath("Moneda")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2052548687]
+texture = ExtResource("1_iog8f")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D" unique_id=1436389507]
+libraries/ = SubResource("AnimationLibrary_dks0t")
+autoplay = &"AnimacionDinero"
+
+[node name="Moneda" type="Area2D" parent="." unique_id=134384998]
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moneda" unique_id=1713955913]
+shape = SubResource("CircleShape2D_iog8f")

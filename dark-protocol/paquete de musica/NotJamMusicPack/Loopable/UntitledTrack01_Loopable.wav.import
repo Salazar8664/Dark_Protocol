@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://4mtgj07hcjjp"
+path="res://.godot/imported/UntitledTrack01_Loopable.wav-556a0febbc9f808e01c97f0933f2a799.sample"
+
+[deps]
+
+source_file="res://paquete de musica/NotJamMusicPack/Loopable/UntitledTrack01_Loopable.wav"
+dest_files=["res://.godot/imported/UntitledTrack01_Loopable.wav-556a0febbc9f808e01c97f0933f2a799.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

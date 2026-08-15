@@ -18,6 +18,7 @@ area_2d = NodePath("Area2D")
 Material_Personaje_rojo = ExtResource("2_826hx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1468341726]
+z_index = 1
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_tf8m5")
 

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c6yxr83ly5ytq"
+path="res://.godot/imported/CrashingOut_Loopable.wav-6ca60b50fd5a4eeec03e2b3105621e7a.sample"
+
+[deps]
+
+source_file="res://paquete de musica/NotJamMusicPack/Loopable/CrashingOut_Loopable.wav"
+dest_files=["res://.godot/imported/CrashingOut_Loopable.wav-6ca60b50fd5a4eeec03e2b3105621e7a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

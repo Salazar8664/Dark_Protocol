@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bu405mmwpevuo"]
+
+[ext_resource type="Texture2D" uid="uid://0vsr7yjg8f45" path="res://Tiled_Sets/tiledset1.png" id="1_ehsfu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4jbf"]
+atlas = ExtResource("1_ehsfu")
+region = Rect2(128, 112, 32, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48eoj"]
+size = Vector2(32, 13)
+
+[node name="Plataforma_Movil" type="AnimatableBody2D" unique_id=217143011]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=483967805]
+texture = SubResource("AtlasTexture_b4jbf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1643966853]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_48eoj")
+one_way_collision = true

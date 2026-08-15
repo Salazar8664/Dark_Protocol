@@ -3,9 +3,12 @@ extends CharacterBody2D
 @export var area_2d : Area2D
 @export var Material_Personaje_rojo: ShaderMaterial
 signal PersonajeMuerto
-var _velocidad: float = 100.0 
-var _velocidad_salto: float = -300
+var _velocidad: float = 110.0 
+var _velocidad_salto: float = -400
 var _Muerto: bool
+#variables control buffer
+var tocando_suelo: bool = false
+@export var duraciom_buffer_salto:float = 0.15
 func _ready():
 	add_to_group("Personajes")
 	area_2d.body_entered.connect(_on_area_2d_body_entered)
@@ -17,8 +20,12 @@ func _physics_process(delta):
 	#gravedad
 	velocity += get_gravity() * delta
 	#salto
-	if Input.is_action_just_pressed("saltar") && is_on_floor():
-		velocity.y = _velocidad_salto
+	if Input.is_action_just_pressed("saltar"):
+		if is_on_floor():
+			velocity.y = _velocidad_salto
+		else:
+			print("salto programado al tocar el suelo = true")
+			tocando_suelo = true
 	#velosidad
 	if Input.is_action_pressed("dereha"):
 		velocity.x = _velocidad

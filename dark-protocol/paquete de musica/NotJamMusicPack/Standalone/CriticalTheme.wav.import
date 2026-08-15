@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cqooc001y0tt7"
+path="res://.godot/imported/CriticalTheme.wav-397432b66b5771114e72ada72b524167.sample"
+
+[deps]
+
+source_file="res://paquete de musica/NotJamMusicPack/Standalone/CriticalTheme.wav"
+dest_files=["res://.godot/imported/CriticalTheme.wav-397432b66b5771114e72ada72b524167.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://0xjvilfoae01"
+path="res://.godot/imported/KleptoLindaTitles_Loopable.wav-7316658ba249bf5ba77d04ec8ce1eb6c.sample"
+
+[deps]
+
+source_file="res://paquete de musica/NotJamMusicPack/Loopable/KleptoLindaTitles_Loopable.wav"
+dest_files=["res://.godot/imported/KleptoLindaTitles_Loopable.wav-7316658ba249bf5ba77d04ec8ce1eb6c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

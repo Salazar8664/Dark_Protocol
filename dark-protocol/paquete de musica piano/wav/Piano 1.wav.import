@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bpihvja13m2le"
+path="res://.godot/imported/Piano 1.wav-05c5ffacc8d050d00e1aa4824b87744c.sample"
+
+[deps]
+
+source_file="res://paquete de musica piano/wav/Piano 1.wav"
+dest_files=["res://.godot/imported/Piano 1.wav-05c5ffacc8d050d00e1aa4824b87744c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

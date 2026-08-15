@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dtoqt1d70ga13"
+path="res://.godot/imported/Piano 6.mp3-6c0687f10e009a2737005ca1cf126b50.mp3str"
+
+[deps]
+
+source_file="res://paquete de musica piano/mp3/Piano 6.mp3"
+dest_files=["res://.godot/imported/Piano 6.mp3-6c0687f10e009a2737005ca1cf126b50.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

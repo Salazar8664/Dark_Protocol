@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://clplvb7jt6p73"
+path="res://.godot/imported/The Glitch.mp3-4b41bd41fc9b66838af61ab70e68baf2.mp3str"
+
+[deps]
+
+source_file="res://paquete de musica/The Glitch.mp3"
+dest_files=["res://.godot/imported/The Glitch.mp3-4b41bd41fc9b66838af61ab70e68baf2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

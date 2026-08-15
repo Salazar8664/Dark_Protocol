@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cs6osmjgu84eu"
+path="res://.godot/imported/Piano 6.ogg-2dd06733361b60d53907141296209542.oggvorbisstr"
+
+[deps]
+
+source_file="res://paquete de musica piano/ogg/Piano 6.ogg"
+dest_files=["res://.godot/imported/Piano 6.ogg-2dd06733361b60d53907141296209542.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

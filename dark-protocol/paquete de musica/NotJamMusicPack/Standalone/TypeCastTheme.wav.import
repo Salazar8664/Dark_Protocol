@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bx8lmx3uqm12q"
+path="res://.godot/imported/TypeCastTheme.wav-405a473ed05b4a6bf4b8312482cd6492.sample"
+
+[deps]
+
+source_file="res://paquete de musica/NotJamMusicPack/Standalone/TypeCastTheme.wav"
+dest_files=["res://.godot/imported/TypeCastTheme.wav-405a473ed05b4a6bf4b8312482cd6492.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
