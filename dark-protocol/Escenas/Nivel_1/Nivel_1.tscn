@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cplc5w43wyvge" path="res://Escenas/Trampa/Trampas_Plataforma/Plataforma_trampa.tscn" id="5_r18xa"]
 [ext_resource type="PackedScene" uid="uid://c0lshywyeiv1f" path="res://Escenas/Trampa/Trampas_Plataforma/plataforma_trampa_2.tscn" id="9_4h7fp"]
 [ext_resource type="PackedScene" uid="uid://bfbuda6uur76m" path="res://Escenas/Trampa/Trampas_Plataforma/plataforma_trampa_3.tscn" id="10_8kdcp"]
+[ext_resource type="PackedScene" uid="uid://d26at4uowpysx" path="res://Escenas/enemigos/triangulo/triangulo.tscn" id="11_0qaux"]
 
 [sub_resource type="Animation" id="Animation_dk70b"]
 resource_name = "MovimientoPlataforma"
@@ -102,3 +103,11 @@ position = Vector2(-173, 16)
 
 [node name="Plataforma_Trampa3" parent="." unique_id=674004249 instance=ExtResource("10_8kdcp")]
 position = Vector2(-141, 16)
+
+[node name="enemigos" type="Node2D" parent="." unique_id=1928792888]
+
+[node name="triangulo" parent="enemigos" unique_id=591540378 instance=ExtResource("11_0qaux")]
+position = Vector2(15, 209)
+
+[node name="triangulo2" parent="enemigos" unique_id=1028906319 instance=ExtResource("11_0qaux")]
+position = Vector2(-22, -15)

@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://d26at4uowpysx"]
+
+[ext_resource type="Script" uid="uid://ddevi4wcjqbvu" path="res://Escenas/enemigos/triangulo/triangulo.gd" id="1_ab61x"]
+[ext_resource type="Texture2D" uid="uid://dbsmtr0n3i7re" path="res://Escenas/enemigos/triangulo/piramede corriendo.png" id="1_dn1v1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ab61x"]
+atlas = ExtResource("1_dn1v1")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_04g88"]
+atlas = ExtResource("1_dn1v1")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3qeyt"]
+atlas = ExtResource("1_dn1v1")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2qqb"]
+atlas = ExtResource("1_dn1v1")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ibho7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ab61x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_04g88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3qeyt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2qqb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ab61x"]
+size = Vector2(80, 41.75)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fwlr8"]
+radius = 22.0
+height = 56.0
+
+[node name="triangulo" type="Area2D" unique_id=591540378]
+scale = Vector2(0.35, 0.35)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_ab61x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2026231114]
+sprite_frames = SubResource("SpriteFrames_ibho7")
+autoplay = "default"
+frame = 2
+frame_progress = 0.29409072
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1231649413]
+position = Vector2(0, 17.125)
+shape = SubResource("RectangleShape2D_ab61x")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1785364957]
+position = Vector2(0, -12)
+shape = SubResource("CapsuleShape2D_fwlr8")
+
+[node name="Timer" type="Timer" parent="." unique_id=2066957596]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
